@@ -1,0 +1,236 @@
+1. mkdir myStory
+2. cd myStory
+3. create 2 files with name  ----> Characters and myStory in visual studio code
+Characters ---->
+**Characters**
+  Monkey 
+  Crocodile
+  Crocodile's Wife.
+
+Story-------------->
+**Story**
+Once upon a time in a forest , there lived a monkey who resided on a jamoon(berry) tree,
+which was on the banks of a river. In the same forest, there lived a crocodile and his wife .....
+
+4. git init
+ -------------->initialise git to start tracking changes to our files
+5. git status
+6. git add Characters Story
+7. git commit -m "add Characters and setting for the story"
+
+8. go to file story add few more lines to story
+9. git status
+10. git add Story
+11. git diff --staged
+12. git diff
+    git diff is very helpful if a developer is
+    looking at changes made by someonedir
+    else in their code since they last worked
+    on it.
+13. git commit -m "Added the story Plot"
+
+14 . git log 
+you can see all ur commits
+
+15 . git checkout (first 5 characters of the commit id)
+There is also a commit id given to each
+commit. You can use the id or even the
+first 5 characters of the id to move back
+to that commit using git checkout
+<commit id>
+
+16. git branch "FlippedStory"
+
+17. git branch 
+18. vim Story 
+-----> change story and :wq!
+
+19. git checkout FlippedStory
+20. git branch
+21. git log
+22. git checkout master
+23. git log
+24. git diff master FlippedStory
+25. git merge
+26. git remote add origin https://github.com/LakshyaAgrawal27/CLASS-20.git
+27. git push origin master 
+
+
+28.   Make changes in Characters
+29. git pull origin master
+
+30. forking repository 
+31. git clone githublink
+
+Eg---->
+xyz@abc LOL~
+$ mkdir myStory
+
+xyz@abc LOL~
+$ cd myStory
+
+xyz@abc LOL~/myStory
+$ vi Characters
+
+xyz@abc LOL~/myStory
+$ vi Characters
+
+xyz@abc LOL~/myStory
+$ vi Story
+
+xyz@abc LOL~/myStory
+$ dir
+Characters  Story
+
+xyz@abc LOL~/myStory
+$ git init
+Initialized empty Git repository in C:/Users/riya7/myStory/.git/
+
+xyz@abc LOL~/myStory (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Characters
+        Story
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+xyz@abc LOL~/myStory (master)
+$ git add Characters Story
+warning: LF will be replaced by CRLF in Characters.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Story.
+The file will have its original line endings in your working directory
+
+xyz@abc LOL~/myStory (master)
+$ git commit -m "add Characters and setting for the story"
+[master (root-commit) 41a3adf] add Characters and setting for the story
+ 2 files changed, 7 insertions(+)
+ create mode 100644 Characters
+ create mode 100644 Story
+
+xyz@abc LOL~/myStory (master)
+$ vi Story
+
+xyz@abc LOL~/myStory (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Story
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+xyz@abc LOL~/myStory (master)
+$ git add Story
+warning: LF will be replaced by CRLF in Story.
+The file will have its original line endings in your working directory
+
+xyz@abc LOL~/myStory (master)
+$ git diff --staged
+diff --git a/Story b/Story
+index 58926a0..7939260 100644
+--- a/Story
++++ b/Story
+@@ -1,3 +1,6 @@
+ **Story**
+ Once upon a time in a forest , there lived a monkey who resided on a jamoon(berry) tree,
+ which was on the banks of a river. In the same forest, there lived a crocodile and his wife .....
++
++
++Hi adding second time
+
+xyz@abc LOL~/myStory (master)
+$ git diff
+
+xyz@abc LOL~/myStory (master)
+$ git commit -m "Added the story Plot"
+[master 049076f] Added the story Plot
+ 1 file changed, 3 insertions(+)
+
+xyz@abc LOL~/myStory (master)
+$ git log
+commit 049076ffa0b99562bb34fb20edc7679d717b8679 (HEAD -> master)
+Author: LakshyaAgrawal27 <76614024+LakshyaAgrawal27@users.noreply.github.com>
+Date:   Mon Jun 7 19:09:02 2021 +0530
+
+    Added the story Plot
+
+commit 41a3adf8e6037a0c4d38622acdbfe8b32e88a396
+Author: LakshyaAgrawal27 <76614024+LakshyaAgrawal27@users.noreply.github.com>
+Date:   Mon Jun 7 19:06:33 2021 +0530
+
+    add Characters and setting for the story
+
+xyz@abc LOL~/myStory (master)
+$ git checkout 41a3a
+Note: switching to '41a3a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 41a3adf add Characters and setting for the story
+
+xyz@abc LOL~/myStory ((41a3adf...))
+$ git branch "FlippedStory"
+
+xyz@abc LOL~/myStory ((41a3adf...))
+$ git branch
+* (HEAD detached at 41a3adf)
+  FlippedStory
+  master
+
+xyz@abc LOL~/myStory ((41a3adf...))
+$ vim Story
+
+xyz@abc LOL~/myStory ((41a3adf...))
+$ git checkout FlippedStory
+Switched to branch 'FlippedStory'
+M       Story
+
+xyz@abc LOL~/myStory (FlippedStory)
+$ git branch
+* FlippedStory
+  master
+
+xyz@abc LOL~/myStory (FlippedStory)
+$ git log
+commit 41a3adf8e6037a0c4d38622acdbfe8b32e88a396 (HEAD -> FlippedStory)
+Author: LakshyaAgrawal27 <76614024+LakshyaAgrawal27@users.noreply.github.com>
+Date:   Mon Jun 7 19:06:33 2021 +0530
+
+    add Characters and setting for the story
+
+xyz@abc LOL~/myStory (FlippedStory)
+$ git diff master FlippedStory
+diff --git a/Story b/Story
+index 7939260..58926a0 100644
+--- a/Story
++++ b/Story
+@@ -1,6 +1,3 @@
+ **Story**
+ Once upon a time in a forest , there lived a monkey who resided on a jamoon(berry) tree,
+ which was on the banks of a river. In the same forest, there lived a crocodile and his wife .....
+-
+-
+-Hi adding second time
+
+xyz@abc LOL~/myStory (FlippedStory)
+$ git merge
